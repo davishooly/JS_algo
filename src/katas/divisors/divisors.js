@@ -1,6 +1,6 @@
 
 function calculate(a, b) {
-    let result = [];
+	let result = [];
 	for (var i = a; i <= b; i++) {
 		let sum = 0;
 		for (let j = 1; j <= i; j++) {
