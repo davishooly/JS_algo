@@ -17,7 +17,7 @@ const formatTableContent = (data, headers=false, index=false) => {
                 tableContent.push(`<td>${!headers ? i + 1 : i }</td>`)
             }
             element.forEach((value) => {
-                tableContent.push(`<td>${value}</td>`)
+                tableContent.push(`<td>${value === null ? '' : value }</td>`)
             })
             tableContent.push(`</tr>`)
         }
