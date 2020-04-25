@@ -18,3 +18,4 @@ tmp
 coverage
 clean.sh
 .nyc_output
+yarn.lock
