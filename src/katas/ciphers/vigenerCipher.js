@@ -8,7 +8,7 @@ const formatData = (data) => {
   return nText;
 };
 
-const encryptText = (text, alphabets, key) => {
+export const encryptText = (text, alphabets, key) => {
   const nText =  formatData(text);
   let encrypted = [];
   const keyWord = [];
@@ -29,7 +29,7 @@ const encryptText = (text, alphabets, key) => {
     }
   }
   const cipherText = encrypted.join('');
-  decryptCipher(cipherText, generatedKey)
+  return decryptCipher(cipherText, generatedKey)
 };
 
 const decryptCipher = ( cipherText, key ) => {
@@ -48,9 +48,7 @@ const decryptCipher = ( cipherText, key ) => {
       }
     }
   }
-  console.log(decrypted.join('').toLowerCase())
+  return decrypted.join('').toLowerCase();
 };
 
 const alphabets = 'ABCDEFJHIJKLMNOPQRSTUVWXYZ';
-
-encryptText('denno mash', alphabets, 'KEY' );
