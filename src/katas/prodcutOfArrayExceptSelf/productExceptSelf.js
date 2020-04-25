@@ -4,9 +4,10 @@
 const productExceptSelf = (nums) => {
     const result = [];
     nums.forEach((num, i) => {
-        const product = [...nums]
-        product.splice(i, 1)
-        result.push(product.reduce((acc, curr) => acc * curr ))
+        nums.splice(i, 1)
+        result.push(nums.reduce((acc, curr) => acc * curr ))
+        nums.splice(i, 0, num)
+
     })
     return result;
 }
