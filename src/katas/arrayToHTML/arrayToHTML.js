@@ -1,4 +1,13 @@
-const formatTableContent = (data, headers=false, index=false) => {
+// The task is simple - given a 2D array (list), generate an HTML table representing the data from this array.
+//
+//     You need to write a function called to_table/toTable, that takes three arguments:
+//
+//     data - a 2D array (list),
+// headers - an optional boolean value. If True, the first row of the array is considered a header (see below). Defaults to False,
+// index - an optional boolean value. If True, the first column in the table should contain 1-based indices of the corresponding row. If headers arguments is True, this column should have an empty header. Defaults to False.
+//     and returns a string containing HTML tags representing the table.
+
+export const formatTableContent = (data, headers=false, index=false) => {
     const tableContentHeader = [];
     const tableContent = [];
     let result = '';
