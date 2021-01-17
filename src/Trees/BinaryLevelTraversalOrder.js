@@ -14,8 +14,8 @@ var levelOrder = function(root) {
 
 
 //  stack or queue
-//  stack -> DFS(depth first search) -> for every node you traverse deeply to a leafNode(no child nodes)
-//  queue -> BFS(breath first search) -> visit a node closest to the root that you havent visited.
+//  stack -> DFS(depth first search) -> for every node you traverse deeply to a leafNode(no child nodes) (LIFO)
+//  queue -> BFS(breath first search) -> visit a node closest to the root that you havent visited.(FIFO)
 
 //  traverse top level nodes
     const queue = [root];
@@ -31,7 +31,7 @@ var levelOrder = function(root) {
         const temp = [];
         const size = queue.length;
 
-        for(i= 0; i < size; i++ ){
+        for( let i = 0; i < size; i++ ){
             const node = queue.shift();
             if(node.left){queue.push(node.left)}
             if(node.right){ queue.push(node.right)}
